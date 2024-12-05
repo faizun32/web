@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="id">
+   
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div class="logo">
+        <img src="smk.png" alt="Logo" class="logo">
+        <h1 class="tpm">Kelas XI TPM 1</h1>
+        <img src="TPM.png" alt="Logo" class="logo">
+    </div>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    /* Reset margin, padding, dan box-sizing */
+    /* Reset margin, padding, dan box-sizing */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    /* Animasi yang membuat elemen .contain muncul dan hilang */
+    .contain {
+        height: 100vh;
+        width: 100vw;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #333;
+      color: white;
+      padding: 30px;
+      font-size: 2em;
+      border-radius: 10px;
+      opacity: 0;
+      animation: fadeInOut 5s forwards;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      text-align: center;
+      z-index: 999;
+    }
+
+    /* Keyframes untuk animasi fadeInOut */
+    @keyframes fadeInOut {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+    /* Container for all elements */
+        .logo {
+  display: flex;                /* Gunakan Flexbox untuk penataan horizontal */
+  justify-content: center;      /* Atur agar semua elemen berada di tengah secara horizontal */
+  align-items: center;          /* Untuk memastikan teks dan gambar sejajar secara vertikal */
+  width: 200px;                 /* Tentukan lebar kontainer logo jika diperlukan */
+  height: auto;                 /* Biarkan tinggi otomatis berdasarkan isi */
+  margin-left: 550px;
+}
+
+.logo img {
+  width: 80px;                  /* Tetapkan ukuran gambar */
+  height: auto;                 /* Agar gambar tidak terdistorsi */
+  margin: 0 10px;               /* Memberikan jarak horizontal antar gambar */
+}
+
+.tpm {
+  margin: 0;                    /* Hilangkan margin default untuk <h1> */
+  padding: 0;                   /* Hilangkan padding jika ada */
+  font-size: 18px;              /* Tentukan ukuran font sesuai kebutuhan */
+  white-space: nowrap;          /* Pastikan teks tidak terpotong atau melipat ke baris baru */
+}
+
+
+
+
+
+         body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #06681b, #06681b); /* Gradien warna */
+        }
+        ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #e7e7e7;
+  background-color: #f3f3f3;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+li a.active {
+  color: white;
+  background-color: #04AA6D;
+}
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px;
+            background-color: #f1faee;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-container input {
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            margin-left: 10px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .search-container button {
+            background-color: #3d6104;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .search-container button:hover {
+            background-color: #2c4f01;
+        }
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px;
+            background-color: #f1faee;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        section {
+            display: none;
+            margin: 40px 0;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .row {
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: space-between; /* Menyebarkan kartu dengan jarak yang merata */
+}
+        #siswaCards {
+            grid-template-columns: repeat(4, 1fr); /* 3 kolom */
+            gap: 20px; /* Jarak antara kartu */
+            margin-top: 20px; /* Jarak atas untuk kartu */
+        }
+
+        .card {
+            border: 1px solid #ccc; /* Border di sekitar setiap kartu */
+            padding: 10px; /* Ruang di dalam kartu */
+            box-sizing: border-box; /* Memastikan padding dan border masuk dalam ukuran total */
+        }
+
+        .card img {
+            max-width: 100%; /* Memastikan gambar sesuai dalam kartu */
+            height: auto; /* Mempertahankan rasio aspek gambar */
+        }
+
+        .grid-container {
+            display: grid; /* Menggunakan Grid Layout */
+        }
+        .card-container{
+          
+            display: inline-block;
+            
+        }
+    .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            flex: 1 1 calc(30% - 20px); /* Ukuran kartu */
+            box-sizing: border-box;
+            transition: transform 0.3s;
+            text-align: center;
+            display: inline-block;
+            width: 450px;
+            height: 400px;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+.card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #1d3557;
+}
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: rgb(19, 153, 7);
+            font-family: 'Roboto', sans-serif;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #a8dadc;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        td {
+            background-color: #f8f9fa;
+            font-size: 18px;
+        }
+        .gallery img {
+            width: 100%;
+            height: 150px;
+            margin: 15px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: #06681b;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<div class="contain">
+    <div class="wrapper">
+        <div class="header">
+            <h1>Selamat Datang di Website XI TPM 1 Kami!</h1>
+        </div>
+        <div class="content">
+            <p>Ini adalah contoh layout dengan animasi pembukaan. Nikmati pengalaman menjelajah!</p>
+        </div>
+    </div>
+</div>
+    <div class="tombol">
+       
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="HTML/data_siswa.html">Data siswa</a></li>
+                <li><a href="HTML/data_guru.html">Data guru</a></li>
+                <li><a href="HTML/mapel.html">Mapel</a></li>
+                <li><a href="HTML/struktur_kelas.html">struktur kelas</a></li>
+                <li><a href="HTML/piket.html">Piket kelas</a></li>
+                <li><a href="HTML/kegiatan.html">Kegiatan kelas</a></li>
+                <li><a href="HTML/gallery.html">Gallery kelas</a></li>
+              </ul>              
+        </nav>
+    </div>
+
+
+</body>
+</html>
+        </section>
+        <section id="data-guru">
+            
+        </section>
+        <section id="struktur-kelas">
+              
+        </section>
+        <section id="piket-kelas">
+            
+        </section>
+        <section id="kegiatan-kelas">
+         
+    </table>
+        </section>
+        <style>
+        
+        </style>
+        <section id="galeri-foto">
+            
+        </section>
+    </div>
+    <footer>
+        <p>&copy; Website Kelas [XI TPM 1].</p>
+    </footer>
+    <script>
+        let lastOpenedSection = null; // Menyimpan bagian yang terakhir dibuka
+        function toggleSection(sectionId) {
+            var sections = document.querySelectorAll('section');
+            sections.forEach(section => section.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'block';
+        }
+        function searchSiswa() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('.card');
+
+            cards.forEach(card => {
+                const name = card.querySelector('h3').textContent.toLowerCase();
+                if (name.includes(input)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+                // Tampilkan bagian yang dipilih
+                selectedSection.style.display = 'block';
+                lastOpenedSection = sectionId; // Update bagian terakhir yang dibuka
+            }
+        // Tampilkan section pertama secara default
+        showSection('data-siswa');
+    </script>
+    <script>
+    // Fungsi untuk menghapus elemen .contain setelah animasi selesai
+    window.onload = function() {
+      const containElement = document.querySelector('.contain');
+      // Setel waktu penghapusan sesuai durasi animasi (3 detik)
+      setTimeout(function() {
+        containElement.style.display = 'none';
+      }, 3000);  // 3000ms = 3 detik
+    };
+  </script>
+</body>
+</html>
