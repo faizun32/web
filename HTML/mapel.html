@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <div class="logo">
+        <img src="../smk.png" alt="Logo" class="logo">
+        <h1 class="tpm">Kelas XI TPM 1</h1>
+        <img src="../TPM.png" alt="Logo" class="logo">
+    </div>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    /* Reset margin, padding, dan box-sizing */
+    /* Reset margin, padding, dan box-sizing */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    
+    /* Animasi yang membuat elemen .contain muncul dan hilang */
+    .contain {
+        height: 100vh;
+        width: 100vw;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #333;
+      color: white;
+      padding: 30px;
+      font-size: 2em;
+      border-radius: 10px;
+      opacity: 0;
+      animation: fadeInOut 5s forwards;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      text-align: center;
+      z-index: 999;
+    }
+
+    /* Keyframes untuk animasi fadeInOut */
+    @keyframes fadeInOut {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+    /* Container for all elements */
+        .logo {
+  display: flex;                /* Gunakan Flexbox untuk penataan horizontal */
+  justify-content: center;      /* Atur agar semua elemen berada di tengah secara horizontal */
+  align-items: center;          /* Untuk memastikan teks dan gambar sejajar secara vertikal */
+  width: 200px;                 /* Tentukan lebar kontainer logo jika diperlukan */
+  height: auto;                 /* Biarkan tinggi otomatis berdasarkan isi */
+  margin-left: 550px;
+}
+
+.logo img {
+  width: 80px;                  /* Tetapkan ukuran gambar */
+  height: auto;                 /* Agar gambar tidak terdistorsi */
+  margin: 0 10px;               /* Memberikan jarak horizontal antar gambar */
+}
+
+.tpm {
+  margin: 0;                    /* Hilangkan margin default untuk <h1> */
+  padding: 0;                   /* Hilangkan padding jika ada */
+  font-size: 18px;              /* Tentukan ukuran font sesuai kebutuhan */
+  white-space: nowrap;          /* Pastikan teks tidak terpotong atau melipat ke baris baru */
+}
+
+
+
+
+
+         body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #06681b, #06681b); /* Gradien warna */
+        }
+        ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #e7e7e7;
+  background-color: #f3f3f3;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+li a.active {
+  color: white;
+  background-color: #04AA6D;
+}
+.container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px;
+            background-color: #f1faee;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        section {
+            display: none;
+            margin: 40px 0;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .row {
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: space-between; /* Menyebarkan kartu dengan jarak yang merata */
+}
+        #siswaCards {
+            grid-template-columns: repeat(4, 1fr); /* 3 kolom */
+            gap: 20px; /* Jarak antara kartu */
+            margin-top: 20px; /* Jarak atas untuk kartu */
+        }
+
+        .card {
+            border: 1px solid #ccc; /* Border di sekitar setiap kartu */
+            padding: 10px; /* Ruang di dalam kartu */
+            box-sizing: border-box; /* Memastikan padding dan border masuk dalam ukuran total */
+        }
+
+        .card img {
+            max-width: 100%; /* Memastikan gambar sesuai dalam kartu */
+            height: auto; /* Mempertahankan rasio aspek gambar */
+        }
+
+        .grid-container {
+            display: grid; /* Menggunakan Grid Layout */
+        }
+        .card-container{
+          
+            display: inline-block;
+            
+        }
+    .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            flex: 1 1 calc(30% - 20px); /* Ukuran kartu */
+            box-sizing: border-box;
+            transition: transform 0.3s;
+            text-align: center;
+            display: inline-block;
+            width: 450px;
+            height: 400px;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+.card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #1d3557;
+}
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: white;
+            font-family: 'Roboto', sans-serif;
+            margin-top: 50px;
+        
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #a8dadc;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        td {
+            background-color: #f8f9fa;
+            font-size: 18px;
+        }
+        .gallery img {
+            width: 100%;
+            height: 150px;
+            margin: 15px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: #06681b;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            font-size: 50px;
+        }
+#data-guru .card {
+    width: 300px; /* Default width for all cards */
+    height: 310px; /* Default height for all cards */
+    margin: 10px; /* Margin antar kartu */
+   
+    border-radius: 10px; /* Sudut kartu melengkung */
+    overflow: hidden; /* Menyembunyikan bagian yang melampaui */
+    text-align: center; /* Rata tengah teks */
+    display: inline-block; /* Agar kartu bisa berjejer */
+}
+#data-guru .card img {
+    width: 100px; /* Gambar mengikuti lebar kartu */
+    height: 100px; /* Tinggi otomatis sesuai rasio gambar */
+}
+#data-guru h3 {
+    font-size: 14px; /* Ukuran font untuk nama guru */
+}
+#data-guru p {
+    font-size: 12px; /* Ukuran font untuk mata pelajaran */
+}
+/* Card for Agus Siswanto (centered and bigger) */
+.top-card {
+    top: +500px; /* Move this card up */
+    z-index: 1; /* Ensure it stays on top of others */
+    width: 50px; /* Make Agus Siswanto's card a bit larger */
+    height: 120px; /* Adjust height for Agus Siswanto's card */
+}
+/* Cards below Agus Siswanto (larger than default size) */
+.other-cards {
+    text-align: center; /* Center the remaining cards below */
+}
+.other-cards .card {
+    width: 120px; /* Set width for the other cards to make them larger */
+    height: 20px; /* Set height for the other cards to make them larger */
+    margin: 10px; /* Margin antar kartu */
+    display: inline-block; /* Ensure cards are displayed inline */
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="HTML/data_siswa.html">Data siswa</a></li>
+            <li><a href="HTML/data_guru.html">Data guru</a></li>
+            <li><a href="HTML/mapel.html">Mapel</a></li>
+            <li><a href="HTML/struktur_kelas.html">struktur kelas</a></li>
+            <li><a href="HTML/piket.html">Piket kelas</a></li>
+            <li><a href="HTML/kegiatan.html">Kegiatan kelas</a></li>
+            <li><a href="HTML/gallery.html">Gallery kelas</a></li>
+          </ul>              
+    </nav>
+    <table border="1" cellpadding="10" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Hari</th>
+                <th colspan="5" style="text-align: center;">Mata Pelajaran</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Senin</td>
+                <td>PAI</td>
+                <td>PKK</td>
+                <td>B. JAWA</td>
+                <td>B. INDO</td>
+                <td>.</td>
+            </tr>
+            <tr>
+                <td>Selasa</td>
+                <td>PJOK</td>
+                <td>B. INGGRIS</td>
+                <td>BK</td>
+                <td>KOSENTRASI KEAHLIAN</td>
+                <td>KOSENTRASI KEAHLIAN</td>
+            </tr>
+            <tr>
+                <td>Rabu</td>
+                <td>PPKN</td>
+                <td>B. INGGRIS</td>
+                <td>SEJARAH</td>
+                <td>MTK</td>
+                <td>MAPEL PILIHAN</td>
+            </tr>
+            <tr>
+                <td>Kamis</td>
+                <td>KOSENTRASI KEAHLIAN</td>
+                <td>PRODUKTIF KEAHLIAN</td>
+                <td>KOSENTRASI KEAHLIAN</td>
+                <td>.</td>
+                <td>.</td>
+            </tr>
+            <tr>
+                <td>Jumat</td>
+                <td>KOSENTRASI KEAHLIAN</td>
+                <td>PKK</td>
+                <td>.</td>
+                <td>.</td>
+                <td>.</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

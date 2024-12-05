@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animasi Pembukaan Layout</title>
+  <style>
+    /* Reset margin, padding, dan box-sizing */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Tampilan dasar body */
+    .contain {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f9;
+      overflow: hidden; /* Menghindari scroll yang tidak diinginkan saat animasi */
+    }
+
+    /* Wrapper untuk menampung seluruh konten */
+    .wrapper {
+      width: 80%;
+      max-width: 800px;
+      opacity: 0;
+      animation: fadeInWrapper 1.5s ease-out forwards, slideUpWrapper 1s ease-out 0.5s;
+      transform: translateY(30px); /* Posisi awal sedikit lebih rendah */
+    }
+
+    /* Animasi pembukaan header */
+    .header {
+      text-align: center;
+      opacity: 0;
+      animation: fadeInText 1s ease-out 1.5s forwards, scaleUpText 1s ease-out 1s;
+    }
+
+    /* Animasi pembukaan konten */
+    .content {
+      text-align: center;
+      margin-top: 20px;
+      opacity: 0;
+      animation: fadeInText 1s ease-out 2s forwards, scaleUpText 1s ease-out 1.5s;
+    }
+
+    /* Animasi fade-in untuk wrapper */
+    @keyframes fadeInWrapper {
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Animasi slide-up untuk wrapper */
+    @keyframes slideUpWrapper {
+      from {
+        transform: translateY(30px); /* Posisi awal sedikit lebih rendah */
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+
+    /* Animasi fade-in untuk teks header dan konten */
+    @keyframes fadeInText {
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Animasi scale-up untuk teks header dan konten */
+    @keyframes scaleUpText {
+      from {
+        transform: scale(0.8);
+      }
+      to {
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+    <div class="contain">
+  <div class="wrapper">
+    <div class="header">
+      <h1>Selamat Datang di Situs Kami!</h1>
+    </div>
+    <div class="content">
+      <p>Ini adalah contoh layout dengan animasi pembukaan. Nikmati pengalaman menjelajah!</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
